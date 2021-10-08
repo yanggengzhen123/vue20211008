@@ -13,12 +13,15 @@
 <body>
     <div id="app">
         <p>{{counter}}</p>
+        <p z-text="counter"></p>
+        <p z-html="desc"></p>
     </div>
     <script>
         const app = new zhenVue({
             el: '#app',
             data: {
-                counter: 1
+                counter: 1,
+                desc: '<span style="color:red">zhen-vue可还行？</span>'
             }
         })
         setInterval(() => {

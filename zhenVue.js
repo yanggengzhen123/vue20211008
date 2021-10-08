@@ -7,6 +7,8 @@ class zhenVue {
         observe(this.$data)
         // 代理 this.$data.xx ==> this.xx
         proxy(this, '$data')
+        // 创建编译器
+        new Compiler(option.el, this)
     }
 }
 // 根据对象类型决定如何做响应化
